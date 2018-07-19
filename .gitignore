@@ -1,0 +1,43 @@
+__pycache__/
+*.py[cod]
+
+# build/test artefacts
+build/
+dist/
+*.egg-info/
+.coverage
+.coverage.*
+coverage.xml
+.mypy_cache
+.cache
+test-results/
+.pytest_cache/
+
+# static output dir
+/static/
+
+# virtual env dir
+/gigcomply_venv/
+venv/
+
+# editors
+*.sw*
+.idea
+
+# osx
+.DS_Store
+
+# dev env files
+screenshot.png
+host_settings.py
+/gigcomply.db
+test_proxies.csv
+
+# docker-compose local settings
+.env
+
+# logs
+*.log
+
+# temporary
+*.temp_json
