@@ -1,4 +1,5 @@
 from django.db import models
+from .managers import PersonManager, MovieManager
 
 
 class Movie(models.Model):
@@ -31,6 +32,9 @@ class Movie(models.Model):
     def __str__(self):
         return f'{self.title} ({self.year})'
 
+    objects = models.Manager()
+    related_objects = MovieManager()
+
 
 class Person(models.Model):
     first_name = models.CharField(max_length=140)
@@ -53,6 +57,9 @@ class Person(models.Model):
             self.last_name,
             self.first_name,
             self.born)
+
+    objects = models.Manager()
+    related_objects = PersonManager()
 
 
 class Role(models.Model):
